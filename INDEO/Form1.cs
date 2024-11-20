@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.IO.Compression;
 using System.Diagnostics;
 using System.Threading;
 using System.Globalization;
 using System.Data.OleDb;
 using WindowsFormsApplication2;
 using WindowsFormsApplication3;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WindowsFormsApplication1
 {
@@ -172,7 +175,7 @@ namespace WindowsFormsApplication1
         public Form1()
         {
             int Time = Convert.ToInt32(DateTime.Now.ToString("yyyyMMdd"));
-            if (Time > 20240601)
+            if (Time > 20250601)
             {
                 MessageBox.Show("Coś poszło nie tak !");
                 Application.Exit();
@@ -181,7 +184,7 @@ namespace WindowsFormsApplication1
             {
                 InitializeComponent();
                 comboBox1.SelectedIndex = 2;
-                comboBox2.SelectedIndex = 3;
+                comboBox2.SelectedIndex = 2;
                 comboBox4.SelectedIndex = 1;
                 comboBox5.SelectedIndex = 3;
                 WczytajUstawienia();
@@ -497,12 +500,16 @@ namespace WindowsFormsApplication1
                         label164.Text = "QGIS ver." + verQGIS;
                         label40.Text = "QGIS ver." + verQGIS;
                         label125.Text = "QGIS ver." + verQGIS;
+                        label187.Text = "QGIS ver." + verQGIS;
+                        label195.Text = "QGIS ver." + verQGIS;
                     }
                     else
                     {
                         label164.Text = "QGIS";
                         label40.Text = "QGIS";
-                        label25.Text = "QGIS";
+                        label125.Text = "QGIS";
+                        label187.Text = "QGIS";
+                        label195.Text = "QGIS";
                     }
                 }
             }
@@ -591,12 +598,16 @@ namespace WindowsFormsApplication1
                         label164.Text = "QGIS ver." + verQGIS;
                         label40.Text = "QGIS ver." + verQGIS;
                         label125.Text = "QGIS ver." + verQGIS;
+                        label187.Text = "QGIS ver." + verQGIS;
+                        label195.Text = "QGIS ver." + verQGIS;
                     }
                     else
                     {
                         label164.Text = "QGIS";
                         label40.Text = "QGIS";
-                        label25.Text = "QGIS";
+                        label125.Text = "QGIS";
+                        label187.Text = "QGIS";
+                        label195.Text = "QGIS";
                     }
                     string[] zawartosc =
                     {
@@ -751,12 +762,16 @@ namespace WindowsFormsApplication1
                 label164.Text = "QGIS ver." + verQGIS;
                 label40.Text = "QGIS ver." + verQGIS;
                 label125.Text = "QGIS ver." + verQGIS;
+                label187.Text = "QGIS ver." + verQGIS;
+                label195.Text = "QGIS ver." + verQGIS;
             }
             else
             {
                 label164.Text = "QGIS";
                 label40.Text = "QGIS";
-                label25.Text = "QGIS";
+                label125.Text = "QGIS";
+                label187.Text = "QGIS";
+                label195.Text = "QGIS";
             }
         }
 
@@ -865,12 +880,16 @@ namespace WindowsFormsApplication1
                         label164.Text = "QGIS ver." + verQGIS;
                         label40.Text = "QGIS ver." + verQGIS;
                         label125.Text = "QGIS ver." + verQGIS;
+                        label187.Text = "QGIS ver." + verQGIS;
+                        label195.Text = "QGIS ver." + verQGIS;
                     }
                     else
                     {
                         label164.Text = "QGIS";
                         label40.Text = "QGIS";
-                        label25.Text = "QGIS";
+                        label125.Text = "QGIS";
+                        label187.Text = "QGIS";
+                        label195.Text = "QGIS";
                     }
                     kolor = "";
                     if (radioButton24.Checked == true)
@@ -1500,11 +1519,11 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '-') && ((sender as TextBox).Text.Length != 0))
+            if ((e.KeyChar == '-') && ((sender as System.Windows.Forms.TextBox).Text.Length != 0))
             {
                 e.Handled = true;
             }
@@ -2783,7 +2802,7 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
@@ -2800,11 +2819,11 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '-') && ((sender as TextBox).Text.Length != 0))
+            if ((e.KeyChar == '-') && ((sender as System.Windows.Forms.TextBox).Text.Length != 0))
             {
                 e.Handled = true;
             }
@@ -2821,11 +2840,11 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '-') && ((sender as TextBox).Text.Length != 0))
+            if ((e.KeyChar == '-') && ((sender as System.Windows.Forms.TextBox).Text.Length != 0))
             {
                 e.Handled = true;
             }
@@ -3712,7 +3731,7 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
@@ -8451,7 +8470,7 @@ namespace WindowsFormsApplication1
             }
             string[] gmwEnd =
             {
-                "SET_BG_COLOR COLOR=RGB(85,170,255)",
+                "SET_BG_COLOR COLOR=" + kolorMode,
             };
             File.AppendAllLines(gmwPlik, gmwEnd);
             Process MyProcess1 = new Process();
@@ -8490,7 +8509,7 @@ namespace WindowsFormsApplication1
             string[] gmsEnd =
             {
                 @"EXPORT_RASTER FILENAME=""" + sciezkaW + @""" TYPE=GEOTIFF GEN_WORLD_FILE=YES POLYGON_CROP_FILE=""" + plikShp + @""" POLYGON_CROP_USE_EACH=YES POLYGON_CROP_NAME_ATTR=""NAME"" POLYGON_CROP_FILENAME_SUFFIX="".tif""",
-                "SET_BG_COLOR COLOR=RGB(85,170,255)",
+                "SET_BG_COLOR COLOR=" + kolorMode,
             };
             File.AppendAllLines(gmsPlik, gmsEnd);
             Process MyProcess1 = new Process();
@@ -8766,7 +8785,7 @@ namespace WindowsFormsApplication1
                 nPlik = Path.GetFileName(iPlik);
                 Process MyProcess1 = new Process();
                 MyProcess1.StartInfo.FileName = PlikExePython;
-                MyProcess1.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python39\Scripts\gdal_pansharpen.py"" """ + iPlik + @""" """ + sciezkaM + nPlik + @""" """ + sciezkaW + nPlik + @"""" + metodaP + " -of GTiff";
+                MyProcess1.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_pansharpen.py"" """ + iPlik + @""" """ + sciezkaM + nPlik + @""" """ + sciezkaW + nPlik + @"""" + metodaP + " -of GTiff";
                 MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
                 MyProcess1.Start();
                 MyProcess1.WaitForExit();
@@ -8953,7 +8972,6 @@ namespace WindowsFormsApplication1
             {
                 "GLOBAL_MAPPER_SCRIPT VERSION=1.00",
                 "UNLOAD_ALL",
-                "SET_BG_COLOR COLOR=RGB(85,170,255)",
                 @"LOAD_PROJECTION PROJ=""" + plikPrj + @"""",
                 @"IMPORT FILENAME=""" + plikDgn + @""" PROJ=""" + plikPrj + @"""",
                 @"COPY_ATTRS FROM_TYPE=POINTS TO_TYPE=AREAS ATTR_TO_COPY=""<Feature Name>"" MULTI_POINT=ALL",
@@ -10698,7 +10716,7 @@ namespace WindowsFormsApplication1
             {
                 e.Handled = true;
             }
-            if ((e.KeyChar == '.') && (((sender as TextBox).Text.IndexOf('.') > -1) || ((sender as TextBox).Text.Length == 0)))
+            if ((e.KeyChar == '.') && (((sender as System.Windows.Forms.TextBox).Text.IndexOf('.') > -1) || ((sender as System.Windows.Forms.TextBox).Text.Length == 0)))
             {
                 e.Handled = true;
             }
@@ -12221,6 +12239,791 @@ namespace WindowsFormsApplication1
             e.Effect = DragDropEffects.Copy;
         }
 
+        //---------------SENTINEL-2-----------------------------------------------------------------------
+
+        private void TextBox72_TextChanged(object sender, EventArgs e)
+        {
+            sciezkaO = textBox72.Text;
+        }
+
+        private void Button113_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox72.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void TextBox66_TextChanged(object sender, EventArgs e)
+        {
+            plikPrjO = textBox66.Text;
+        }
+
+        private void Button111_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog3.ShowDialog() == DialogResult.OK)
+            {
+                textBox66.Text = openFileDialog3.FileName;
+            }
+        }
+
+        private void TextBox71_TextChanged(object sender, EventArgs e)
+        {
+            sciezkaW = textBox71.Text;
+        }
+
+        private void Button112_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox71.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void TextBox50_TextChanged(object sender, EventArgs e)
+        {
+            plikPrjW = textBox50.Text;
+        }
+
+        private void Button90_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog3.ShowDialog() == DialogResult.OK)
+            {
+                textBox50.Text = openFileDialog3.FileName;
+            }
+        }
+        private void Button114_Click(object sender, EventArgs e)
+        {
+            sciezkaO = textBox72.Text;
+            if (Directory.Exists(sciezkaO) == false)
+            {
+                MessageBox.Show("Błędna Ścieżka do Katalogu z Danymi !");
+            }
+            else
+            {
+                sciezkaO += @"\";
+                sciezkaO = Path.GetFullPath(sciezkaO);
+                plikPrjO = textBox66.Text;
+                if (File.Exists(plikPrjO) == false)
+                {
+                    MessageBox.Show("Brak Pliku z Definicją Układu Współrzędnych Wejściowych !");
+                }
+                else
+                {
+                    sciezkaW = textBox71.Text;
+                    if (Directory.Exists(sciezkaW) == false)
+                    {
+                        MessageBox.Show("Błędna Ścieżka do Katalogu Wynikowego !");
+                    }
+                    else
+                    {
+                        sciezkaW += @"\";
+                        sciezkaW = Path.GetFullPath(sciezkaW);
+                        if (sciezkaO == sciezkaW)
+                        {
+                            MessageBox.Show("Ścieżka do Katalogu Wynikowego ta sama co do Katalogu z Danymi !");
+                        }
+                        else
+                        {
+                            string[] Pliki = Directory.GetFiles(sciezkaO, "*.zip");
+                            SumaPLIK = 0;
+                            foreach (string iPlik in Pliki)
+                            {
+                                ++SumaPLIK;
+                            }
+                            if (SumaPLIK == 0)
+                            {
+                                MessageBox.Show("Brak Scen Satelitarnych w Katalogu z Danymi !");
+                            }
+                            else
+                            {
+                                plikPrjW = textBox50.Text;
+                                if (File.Exists(plikPrjW) == false)
+                                {
+                                    MessageBox.Show("Brak Pliku z Definicją Układu Współrzędnych Wyjściowych !");
+                                }
+                                else
+                                {
+                                    katalogQGIS = textBox62.Text;
+                                    PlikExeGDWarp = katalogQGIS + @"\bin\gdalwarp.exe";
+                                    PlikExeGDTrans = katalogQGIS + @"\bin\gdal_translate.exe";
+                                    PlikExePython = katalogQGIS + @"\bin\python-qgis.bat";
+                                    if (File.Exists(PlikExeGDWarp) == false || File.Exists(PlikExeGDTrans) == false || File.Exists(PlikExePython) == false)
+                                    {
+                                        MessageBox.Show(@"Wskaż ścieżkę do Katalogu QGIS !" + Environment.NewLine + @"Pomarańczowa Gwiazdka w Lewym Górnym Rogu !");
+                                    }
+                                    else
+                                    {
+                                        System.Environment.SetEnvironmentVariable("GDAL_DATA", katalogQGIS + @"\bin");
+                                        PlikExeGDWarp = @"""" + PlikExeGDWarp + @"""";
+                                        PlikExeGDTrans = @"""" + PlikExeGDTrans + @"""";
+                                        PlikExePython = @"""" + PlikExePython + @"""";
+                                        Sentinel2();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        private void Sentinel2()
+        {
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.Maximum = SumaPLIK;
+            progressBar1.Value = 0;
+            button90.Enabled = false;
+            button111.Enabled = false;
+            button112.Enabled = false;
+            button113.Enabled = false;
+            button114.Enabled = false;
+            textBox50.Enabled = false;
+            textBox66.Enabled = false;
+            textBox71.Enabled = false;
+            textBox72.Enabled = false;
+            BackgroundWorker1 = new BackgroundWorker();
+            BackgroundWorker1.DoWork += new DoWorkEventHandler(BackgroundWorker_Sentinel2_DoWork);
+            BackgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackgroundWorker_Sentinel2_RunWorkerCompleted);
+            BackgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(BackgroundWorker1_ProgressChanged);
+            BackgroundWorker1.WorkerReportsProgress = true;
+            BackgroundWorker1.WorkerSupportsCancellation = true;
+            BackgroundWorker1.RunWorkerAsync();
+        }
+
+        private void BackgroundWorker_Sentinel2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("Przetworzono " + SumaPLIK.ToString() + " plików.");
+            progressBar1.Value = 0;
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            label50.Text = "";
+            button90.Enabled = true;
+            button111.Enabled = true;
+            button112.Enabled = true;
+            button113.Enabled = true;
+            button114.Enabled = true;
+            textBox50.Enabled = true;
+            textBox66.Enabled = true;
+            textBox71.Enabled = true;
+            textBox72.Enabled = true;
+        }
+
+        private void BackgroundWorker_Sentinel2_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            int progressBarVal = 0;
+            string[] Pliki = Directory.GetFiles(sciezkaO, "*.zip");
+            foreach (string iPlik in Pliki)
+            {
+                ++progressBarVal;
+                BackgroundWorker1.ReportProgress(progressBarVal);
+                nPlik = Path.GetFileName(iPlik);
+                label189.ForeColor = System.Drawing.Color.OrangeRed;
+                ZipFile.ExtractToDirectory(iPlik, sciezkaW);
+                label189.ForeColor = System.Drawing.Color.WhiteSmoke;
+                string[] sciezka = Directory.GetDirectories(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"\GRANULE\");
+                string sciezkaB = sciezka[0] + @"\IMG_DATA\R10m\";
+                string[] PlikiB = Directory.GetFiles(sciezkaB, "*.jp2");
+                foreach (string iPlikB in PlikiB)
+                {
+                    string nPlikB = Path.GetFileName(iPlikB);
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B02_10m.jp2")
+                    {
+                        label188.ForeColor = System.Drawing.Color.Blue;
+                        Process MyProcess0 = new Process();
+                        MyProcess0.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess0.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B02_10m.tif""";
+                        MyProcess0.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess0.Start();
+                        MyProcess0.WaitForExit();                        
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B03_10m.jp2")
+                    {
+                        label188.ForeColor = System.Drawing.Color.Green;
+                        Process MyProcess0 = new Process();
+                        MyProcess0.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess0.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B03_10m.tif""";
+                        MyProcess0.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess0.Start();
+                        MyProcess0.WaitForExit();
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B04_10m.jp2")
+                    {
+                        label188.ForeColor = System.Drawing.Color.Red;
+                        Process MyProcess0 = new Process();
+                        MyProcess0.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess0.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B04_10m.tif""";
+                        MyProcess0.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess0.Start();
+                        MyProcess0.WaitForExit();
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B08_10m.jp2")
+                    {
+                        label188.ForeColor = System.Drawing.Color.Yellow;
+                        Process MyProcess0 = new Process();
+                        MyProcess0.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess0.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B08_10m.tif""";
+                        MyProcess0.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess0.Start();
+                        MyProcess0.WaitForExit();
+                    }
+                }
+                label188.ForeColor = System.Drawing.Color.WhiteSmoke;
+                sciezkaB = sciezka[0] + @"\IMG_DATA\R20m\";
+                PlikiB = Directory.GetFiles(sciezkaB, "*.jp2");
+                foreach (string iPlikB in PlikiB)
+                {
+                    string nPlikB = Path.GetFileName(iPlikB);
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B05_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Blue;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B05_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Blue;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B05_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B05_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B05_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B06_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Green;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B06_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Green;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B06_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B06_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B06_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B07_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Red;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B07_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Red;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B07_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B07_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B07_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B11_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Violet;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B11_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Violet;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B11_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B11_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B11_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B12_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Orange;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B12_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Orange;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B12_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B12_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B12_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                    if (nPlikB.Remove(0, nPlikB.Length - 12) == "_B8A_20m.jp2")
+                    {
+                        label190.ForeColor = System.Drawing.Color.Yellow;
+                        Process MyProcess1 = new Process();
+                        MyProcess1.StartInfo.FileName = PlikExeGDTrans;
+                        MyProcess1.StartInfo.Arguments = @" -strict -ot UInt16 -of GTiff -a_srs """ + plikPrjO + @""" """ + iPlikB + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B8A_20m.tif""";
+                        MyProcess1.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess1.Start();
+                        MyProcess1.WaitForExit();
+                        label191.ForeColor = System.Drawing.Color.Yellow;
+                        Process MyProcess2 = new Process();
+                        MyProcess2.StartInfo.FileName = PlikExeGDWarp;
+                        MyProcess2.StartInfo.Arguments = @" -r cubic -tr 10 10 -of GTiff -t_srs """ + plikPrjO + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B8A_20m.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_B8A_10m.tif""";
+                        MyProcess2.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                        MyProcess2.Start();
+                        MyProcess2.WaitForExit();
+                        File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B8A_20m.tif");
+                        label191.ForeColor = System.Drawing.Color.WhiteSmoke;
+                    }
+                }
+                label190.ForeColor = System.Drawing.Color.WhiteSmoke;
+                Directory.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4), true);
+                string bandB02 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B02_10m.tif";
+                string bandB03 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B03_10m.tif";
+                string bandB04 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B04_10m.tif";
+                string bandB05 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B05_10m.tif";
+                string bandB06 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B06_10m.tif";
+                string bandB07 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B07_10m.tif";
+                string bandB08 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B08_10m.tif";
+                string bandB8A = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B8A_10m.tif";
+                string bandB11 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B11_10m.tif";
+                string bandB12 = sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_B12_10m.tif";
+                label192.ForeColor = System.Drawing.Color.IndianRed;
+                Process MyProcess3 = new Process();
+                MyProcess3.StartInfo.FileName = PlikExePython;
+                MyProcess3.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_merge.py"" -separate -of GTiff -o """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_ALL.tif"" """ + bandB02 + @""" """ + bandB03 + @""" """ + bandB04 + @""" """ + bandB05 + @""" """ + bandB06 + @""" """ + bandB07 + @""" """ + bandB08 + @""" """ + bandB8A + @""" """ + bandB11 + @""" """ + bandB12 + @"""";
+                MyProcess3.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess3.Start();
+                MyProcess3.WaitForExit();
+                File.Delete(bandB02);
+                File.Delete(bandB03);
+                File.Delete(bandB04);
+                File.Delete(bandB05);
+                File.Delete(bandB06);
+                File.Delete(bandB07);
+                File.Delete(bandB08);
+                File.Delete(bandB8A);
+                File.Delete(bandB11);
+                File.Delete(bandB12);
+                label192.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label193.ForeColor = System.Drawing.Color.IndianRed;
+                Process MyProcess4 = new Process();
+                MyProcess4.StartInfo.FileName = PlikExeGDWarp;
+                MyProcess4.StartInfo.Arguments = @" -r cubic -co TFW=YES -co PHOTOMETRIC=RGB -tr 10 10 -tap -multi -overwrite -dstnodata 0 -of GTiff -s_srs """ + plikPrjO + @""" -t_srs """ + plikPrjW + @""" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_ALL.tif"" """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @".tif""";
+                MyProcess4.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess4.Start();
+                MyProcess4.WaitForExit();
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + "_ALL.tif");
+                label193.ForeColor = System.Drawing.Color.WhiteSmoke;
+                /*
+                label194.ForeColor = System.Drawing.Color.IndianRed;
+                Process MyProcess5 = new Process();
+                MyProcess5.StartInfo.FileName = PlikExePython;
+                MyProcess5.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @".tif"" --A_band=3 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_3.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess5.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess5.Start();
+                MyProcess5.WaitForExit();
+                Process MyProcess6 = new Process();
+                MyProcess6.StartInfo.FileName = PlikExePython;
+                MyProcess6.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @".tif"" --A_band=7 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_7.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess6.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess6.Start();
+                MyProcess6.WaitForExit();
+                Process MyProcess7 = new Process();
+                MyProcess7.StartInfo.FileName = PlikExePython;
+                MyProcess7.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_3.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_7.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_NDVI.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess7.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess7.Start();
+                MyProcess7.WaitForExit();
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_3.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 9) + @"_BAND_7.tif");
+                label194.ForeColor = System.Drawing.Color.WhiteSmoke;
+                */
+            }
+        }
+
+        private void TextBox72_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (Directory.Exists(files[0]))
+                {
+                    textBox72.Text = files[0];
+                }
+            }
+        }
+
+        private void TextBox72_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void TextBox66_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (File.Exists(files[0]))
+                {
+                    string roz = files[0];
+                    roz = roz.Remove(0, roz.Length - 4);
+                    if (roz == ".prj" || roz == ".PRJ")
+                    {
+                        textBox66.Text = files[0];
+                    }
+                    else
+                    {
+                        textBox66.Text = "";
+                    }
+                }
+            }
+        }
+
+        private void TextBox66_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void TextBox71_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (Directory.Exists(files[0]))
+                {
+                    textBox71.Text = files[0];
+                }
+            }
+        }
+
+        private void TextBox71_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void TextBox50_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (File.Exists(files[0]))
+                {
+                    string roz = files[0];
+                    roz = roz.Remove(0, roz.Length - 4);
+                    if (roz == ".prj" || roz == ".PRJ")
+                    {
+                        textBox50.Text = files[0];
+                    }
+                    else
+                    {
+                        textBox50.Text = "";
+                    }
+                }
+            }
+        }
+
+        private void TextBox50_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        //---------------NDI------------------------------------------------------------------------------
+
+        private void TextBox96_TextChanged(object sender, EventArgs e)
+        {
+            sciezkaO = textBox96.Text;
+        }
+
+        private void Button118_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox96.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+        private void CheckBox10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox73_TextChanged(object sender, EventArgs e)
+        {
+            sciezkaW = textBox73.Text;
+        }
+
+        private void Button115_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                textBox73.Text = folderBrowserDialog1.SelectedPath;
+            }
+        }
+
+        private void Button119_Click(object sender, EventArgs e)
+        {
+            sciezkaO = textBox96.Text;
+            if (Directory.Exists(sciezkaO) == false)
+            {
+                MessageBox.Show("Błędna Ścieżka do Katalogu z Danymi !");
+            }
+            else
+            {
+                sciezkaO += @"\";
+                sciezkaO = Path.GetFullPath(sciezkaO);
+                string[] Pliki = Directory.GetFiles(sciezkaO, "*.tif");
+                SumaPLIK = 0;
+                foreach (string iPlik in Pliki)
+                {
+                    ++SumaPLIK;
+                }
+                if (SumaPLIK == 0)
+                {
+                    MessageBox.Show("Brak Scen Satelitarnych w Katalogu z Danymi !");
+                }
+                else
+                {
+                    katalogQGIS = textBox62.Text;
+                    PlikExePython = katalogQGIS + @"\bin\python-qgis.bat";
+                    if (File.Exists(PlikExePython) == false)
+                    {
+                        MessageBox.Show(@"Wskaż ścieżkę do Katalogu QGIS !" + Environment.NewLine + @"Pomarańczowa Gwiazdka w Lewym Górnym Rogu !");
+                    }
+                    else
+                    {
+                        System.Environment.SetEnvironmentVariable("GDAL_DATA", katalogQGIS + @"\bin");
+                        PlikExePython = @"""" + PlikExePython + @"""";
+                        NDI();
+                    }
+                }
+            }
+        }
+
+        private void NDI()
+        {
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            progressBar1.Maximum = SumaPLIK;
+            progressBar1.Value = 0;
+            button119.Enabled = false;
+            button118.Enabled = false;
+            button115.Enabled = false;
+            textBox73.Enabled = false;
+            textBox96.Enabled = false;
+            checkBox10.Enabled = false;
+            BackgroundWorker1 = new BackgroundWorker();
+            BackgroundWorker1.DoWork += new DoWorkEventHandler(BackgroundWorker_NDVI_DoWork);
+            BackgroundWorker1.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackgroundWorker_NDVI_RunWorkerCompleted);
+            BackgroundWorker1.ProgressChanged += new ProgressChangedEventHandler(BackgroundWorker1_ProgressChanged);
+            BackgroundWorker1.WorkerReportsProgress = true;
+            BackgroundWorker1.WorkerSupportsCancellation = true;
+            BackgroundWorker1.RunWorkerAsync();
+        }
+
+        private void BackgroundWorker_NDVI_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("Przetworzono " + SumaPLIK.ToString() + " plików.");
+            progressBar1.Value = 0;
+            progressBar1.Style = ProgressBarStyle.Continuous;
+            label50.Text = "";
+            button119.Enabled = true;
+            button118.Enabled = true;
+            button115.Enabled = true;
+            textBox73.Enabled = true;
+            textBox96.Enabled = true;
+            checkBox10.Enabled = true;
+        }
+
+        private void BackgroundWorker_NDVI_DoWork(object sender, DoWorkEventArgs e)
+        {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+            int progressBarVal = 0;
+            string[] Pliki = Directory.GetFiles(sciezkaO, "*.tif");
+            foreach (string iPlik in Pliki)
+            {
+                ++progressBarVal;
+                BackgroundWorker1.ReportProgress(progressBarVal);
+                nPlik = Path.GetFileName(iPlik);
+                string sciezkaW = sciezkaO + @"\" + nPlik.Remove(nPlik.Length - 4);
+                Directory.CreateDirectory(sciezkaW);
+                sciezkaW = sciezkaW + @"\";
+                sciezkaW = Path.GetFullPath(sciezkaW);
+                Process MyProcess = new Process();
+                label197.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.FileName = PlikExePython;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=1 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_2.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_2.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B02.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label198.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=2 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_3.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_3.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B03.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label201.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=3 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_4.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_4.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B04.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label202.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=4 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_5.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_5.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B05.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label203.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=5 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_6.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_6.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B06.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label204.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=6 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_7.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_7.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B07.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label205.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=7 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B08.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label206.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=8 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8A.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8A.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B08A.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label207.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=9 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_11.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_11.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B11.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label208.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + iPlik + @""" --A_band=10 --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_12.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""A""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_12.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_B12.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""(A/10000)""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label209.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_2.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B02_B08.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label210.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_3.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B03_B08.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label211.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_4.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B04_B08.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label212.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_5.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B05_B08.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label213.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_6.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_11.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B06_B11.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label214.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_7.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_11.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B07_B11.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                label215.ForeColor = System.Drawing.Color.IndianRed;
+                MyProcess.StartInfo.Arguments = @"""" + katalogQGIS + @"\apps\Python312\Scripts\gdal_calc.py"" -A """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif"" -B """ + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_12.tif"" --outfile=""" + sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_NDI_B08_B12.tif"" --type=Float32 --NoDataValue=1.001 --overwrite --calc=""((B-A)/(B+A))""";
+                MyProcess.Start();
+                MyProcess.WaitForExit();
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_2.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_3.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_4.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_5.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_6.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_7.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_8A.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_11.tif");
+                File.Delete(sciezkaW + nPlik.Remove(nPlik.Length - 4) + @"_12.tif");
+                label197.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label198.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label201.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label202.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label203.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label204.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label205.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label206.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label207.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label208.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label209.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label210.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label211.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label212.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label213.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label214.ForeColor = System.Drawing.Color.WhiteSmoke;
+                label215.ForeColor = System.Drawing.Color.WhiteSmoke;
+            }
+        }
+
+        private void TextBox96_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (Directory.Exists(files[0]))
+                {
+                    textBox96.Text = files[0];
+                }
+            }
+        }
+
+        private void TextBox96_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void TextBox73_DragDrop(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+                if (Directory.Exists(files[0]))
+                {
+                    textBox73.Text = files[0];
+                }
+            }
+        }
+
+        private void TextBox73_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
 
         //---------------PLUM-----------------------------------------------------------------------------
 
@@ -12450,17 +13253,18 @@ namespace WindowsFormsApplication1
             {
                 File.Delete(gmwPlik);
             }
- //           int W = 531;
- //           int H = 831;
- //           while (Opacity > 0.0)
- //           {
- //               Opacity -= 0.01;
- //               H = H - 7;
- //               Size = new Size(W, H);
- //               Thread.Sleep(5);
- //           }
+        /*
+            int W = 531;
+            int H = 831;
+            while (Opacity > 0.0)
+            {
+                Opacity -= 0.01;
+                H = H - 7;
+                Size = new Size(W, H);
+                Thread.Sleep(5);
+            }
+        */
         }
 
     }
-
 }
